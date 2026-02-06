@@ -6,12 +6,12 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 //Liste l'ensemble des pokémons
-app.get('/pokemons-cards',(req: Request, res:Response) => {
+app.get('/pokemon-cards',(req: Request, res:Response) => {
   res.status(200).json({message:"Liste de tous les pokémons"});
 });
 
 //Donne un pokémon celon son Id
-app.get('/pokemons-cards/:pokemonCardId', (req: Request, res: Response) => {
+app.get('/pokemon-cards/:pokemonCardId', (req: Request, res: Response) => {
     const { pokemonCardId } = req.params;
     res.status(200).json({ message: `Détails du pokémon ${pokemonCardId}` });
 });
